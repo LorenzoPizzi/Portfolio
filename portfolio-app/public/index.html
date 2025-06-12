@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Mon Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../src/styles/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+ 
+ <nav class="navbar">
+  <div class="navbar-content">
+    <span class="navbar-title">Mon Portfolio</span>
+    <div class="navbar-links-left">
+      <a href="#accueil" class="nav-link">Accueil</a>
+      <a href="#competences" class="nav-link">Compétences</a>
+      <a href="#projets" class="nav-link">Projets</a>
+    </div>
+    <div class="navbar-links-right">
+      <a href="https://www.linkedin.com/in/lorenzo-pizzi-a86b1a148/" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="mailto:Pizzi.Lorenzo@hotmail.fr" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </div>
+</nav>
+
+  <div class="container">
+    <header id="accueil">
+      <h1>Portfolio</h1>
+      <p class="subtitle">Bienvenue sur mon espace créatif</p>
+      <div class="presentation">
+        <img src="../public/images/photo_profil.png" alt="Photo de profil" class="avatar">
+        <div>
+          <h2>Bonjour, je m'appelle Lorenzo Pizzi</h2>
+          <p>
+            Actuellement en reconversion professionnelle, je me forme avec passion au métier de développeur web full stack. Curieux, motivé et rigoureux, je souhaite mettre mes nouvelles compétences au service de projets innovants.
+          </p>
+        </div>
+      </div>
+    </header>
+<div class="section-separator"></div>
+   
+<section class="skills-section" id="competences">
+  <h2 class="skills-title">Compétences</h2>
+  <div class="skills-list">
+    <div class="skill-card">
+      <i class="fab fa-html5" style="color:#e44d26"></i>
+      <span>HTML5</span>
+    </div>
+    <div class="skill-card">
+      <i class="fab fa-css3-alt" style="color:#1572b6"></i>
+      <span>CSS3</span>
+    </div>
+    <div class="skill-card">
+      <i class="fab fa-js-square" style="color:#f7df1e"></i>
+      <span>JavaScript</span>
+    </div>
+    <div class="skill-card">
+      <img src="images/svelte_icon.svg" alt="Svelte" class="lang-icon" />
+      <span>Svelte</span>
+    </div>
+    <div class="skill-card">
+      <img src="images/pb_icon.png" alt="PocketBase" class="lang-icon" />
+      <span>PocketBase</span>
+    </div>
+    <div class="skill-card">
+      <img src="images/sequelize.png" alt="Sequelize" class="lang-icon" />
+      <span>Sequelize</span>
+    </div>
+    <div class="skill-card">
+      <i class="fas fa-database" style="color:#336791"></i>
+      <span>PostgreSQL</span>
+    </div>
+    <div class="skill-card">
+      <i class="fab fa-node-js" style="color:#8cc84b"></i>
+      <span>Node.js</span>
+    </div>
+  </div>
+</section>
+<div class="section-separator"></div>
+   
+     <h2 class="projects-title" id="projets">Projets</h2>
+    <section class="carousel-section">
+      <button class="carousel-btn left" id="prevBtn" aria-label="Précédent">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="carousel" id="carousel"></div>
+      <button class="carousel-btn right" id="nextBtn" aria-label="Suivant">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+      </button>
+    </section>
+
+    <footer>
+      <p>&copy; <span id="year"></span> Lorenzo Pizzi</p>
+    </footer>
+  </div>
+
+ 
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <div id="modalGallery" class="modal-gallery"></div>
+      <p id="modalDesc"></p>
+      <div id="modalLangs" class="lang-list"></div>
+    </div>
+  </div>
+
+  
+  <div id="lightbox" class="lightbox">
+    <span class="close-lightbox" id="closeLightbox">&times;</span>
+    <img id="lightboxImg" src="" alt="Agrandissement">
+  </div>
+
+  <script src="scripts/main.js"></script>
+  <script>
+    
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
